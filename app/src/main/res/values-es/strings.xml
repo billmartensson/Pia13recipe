@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="welcome">Welcome ES</string>
+    <string name="funtext">Fun ES text</string>
+    <string name="othertext">More ES text</string>
+    <string name="evermoretext">Even more ES text</string>
+
+    <string name="hellouser">
+        Hola
+        <xliff:g name="name" example="Joe">%s</xliff:g>
+        ESWelcome
+    </string>
+
+</resources>

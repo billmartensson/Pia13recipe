@@ -1,0 +1,13 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name" translatable="false">Pia13recipe</string>
+    <string name="welcome">Welcome</string>
+    <string name="funtext">This is a fun text</string>
+    <string name="othertext">We have more text</string>
+    <string name="evermoretext">Even more text</string>
+
+    <string name="hellouser">
+        Hello
+        <xliff:g name="name" example="Joe">%s</xliff:g>
+        and welcome
+    </string>
+</resources>
