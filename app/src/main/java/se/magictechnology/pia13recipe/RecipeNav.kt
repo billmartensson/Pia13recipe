@@ -19,12 +19,13 @@ fun RecipeNav(recipeviewmodel : RecipeViewModel = viewModel()) {
             })
         }
 
+        /*
         composable<Recipe> { backStackEntry ->
             val navrecipe : Recipe = backStackEntry.toRoute()
 
             RecipeDetailScreen(recipeviewmodel, navrecipe)
         }
-
+        */
     }
 }
 

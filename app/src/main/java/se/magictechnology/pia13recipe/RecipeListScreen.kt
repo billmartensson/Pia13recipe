@@ -40,6 +40,10 @@ fun RecipeListScreen(recipeviewmodel : RecipeViewModel, ispreview : Boolean = fa
                     goRecipe(recipe)
                 }) {
                     Text(recipe.title!!)
+
+                    Text("Steps: ${recipe.recipesteps?.size}" )
+
+                    Text("Ingredients: ${recipe.recipeingredients?.size}" )
                 }
             }
         }

@@ -1,13 +1,16 @@
 package se.magictechnology.pia13recipe
 
+import com.google.firebase.database.Exclude
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.Transient
 
 @Serializable
 data class Recipe(val title : String? = null) {
     var description : String? = null
 
-    //var ingredients : List<RecipeIngredient>? = null
-    //var steps : List<RecipeSteps>? = null
+
+    var recipeingredients : List<RecipeIngredient>? = null
+    var recipesteps : List<RecipeStep>? = null
 
     fun examplerecipe() : Recipe{
 
@@ -19,7 +22,13 @@ data class Recipe(val title : String? = null) {
         templist.add(r1)
         val r2 = RecipeIngredient("Smör", 5, "tsk")
         templist.add(r2)
-        //recipe.ingredients = templist
+        recipe.recipeingredients = templist
+
+        var tempsteps = mutableListOf<RecipeStep>()
+        tempsteps.add(RecipeStep("Elda apelsin"))
+        tempsteps.add(RecipeStep("Smält smöret"))
+
+        recipe.recipesteps = tempsteps
 
         return recipe
 
@@ -45,4 +54,4 @@ data class Recipe(val title : String? = null) {
 data class RecipeIngredient(val name : String? = null, val amount : Int? = null, val unit : String? = null)
 
 @Serializable
-data class RecipeSteps(val steptext : String? = null)
+data class RecipeStep(val steptext : String? = null)
