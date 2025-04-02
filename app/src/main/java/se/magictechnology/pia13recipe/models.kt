@@ -6,8 +6,8 @@ import kotlinx.serialization.Serializable
 data class Recipe(val title : String? = null) {
     var description : String? = null
 
-    var ingredients : List<RecipeIngredient>? = null
-    var steps : List<RecipeSteps>? = null
+    //var ingredients : List<RecipeIngredient>? = null
+    //var steps : List<RecipeSteps>? = null
 
     fun examplerecipe() : Recipe{
 
@@ -19,7 +19,7 @@ data class Recipe(val title : String? = null) {
         templist.add(r1)
         val r2 = RecipeIngredient("Smör", 5, "tsk")
         templist.add(r2)
-        recipe.ingredients = templist
+        //recipe.ingredients = templist
 
         return recipe
 

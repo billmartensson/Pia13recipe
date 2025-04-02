@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "234884264369",
+    "firebase_url": "https://pia13-2e8f7-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "pia13-2e8f7",
+    "storage_bucket": "pia13-2e8f7.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:234884264369:android:f3067939ca421316a0cd90",
+        "android_client_info": {
+          "package_name": "se.magictechnology.pia13android26feb"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBU5u2YrcM8fQTzy8WMkLncWYpQixFy1I4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:234884264369:android:3e20d746c2c1b8bfa0cd90",
+        "android_client_info": {
+          "package_name": "se.magictechnology.pia13recipe"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBU5u2YrcM8fQTzy8WMkLncWYpQixFy1I4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

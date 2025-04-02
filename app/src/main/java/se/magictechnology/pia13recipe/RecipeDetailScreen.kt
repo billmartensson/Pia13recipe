@@ -21,6 +21,7 @@ fun RecipeDetailScreen(recipeviewmodel : RecipeViewModel, currentrecipe : Recipe
 
         Text(currentrecipe.description!!)
 
+        /*
         LazyColumn {
             items(currentrecipe.ingredients!!) { ingredient ->
                 Row {
@@ -30,6 +31,7 @@ fun RecipeDetailScreen(recipeviewmodel : RecipeViewModel, currentrecipe : Recipe
                 }
             }
         }
+         */
     }
 }
 
