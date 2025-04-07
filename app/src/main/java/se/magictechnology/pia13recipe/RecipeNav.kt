@@ -15,8 +15,15 @@ fun RecipeNav(recipeviewmodel : RecipeViewModel = viewModel()) {
     NavHost(navController = navController, startDestination = "recipelist") {
         composable("recipelist") {
             RecipeListScreen(recipeviewmodel, ispreview = false, goRecipe = { recipe ->
-                navController.navigate(recipe)
+                navController.navigate("recipedetail")
             })
+        }
+
+        composable("recipedetail") {
+
+            var gorecipe = recipeviewmodel.recipies.value[0]
+
+            RecipeDetailScreen(recipeviewmodel, gorecipe)
         }
 
         /*
