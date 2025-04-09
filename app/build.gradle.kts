@@ -74,5 +74,5 @@ dependencies {
     implementation("com.google.firebase:firebase-storage")
     implementation("com.google.firebase:firebase-database")
 
-
+    implementation("androidx.datastore:datastore-preferences:1.1.4")
 }

@@ -6,6 +6,8 @@ import kotlinx.serialization.Transient
 
 @Serializable
 data class Recipe(val title : String? = null) {
+    var fbid : String? = null
+    var isFav : Boolean? = null
     var description : String? = null
 
     var portions : Int? = null

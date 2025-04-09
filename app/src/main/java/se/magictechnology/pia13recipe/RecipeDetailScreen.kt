@@ -153,5 +153,5 @@ fun RecipeDetailScreen(recipeviewmodel : RecipeViewModel, currentrecipe : Recipe
 @Preview(showBackground = true)
 @Composable
 fun RecipeDetailScreenPreview() {
-    RecipeDetailScreen(RecipeViewModel(), Recipe().examplerecipe())
+    //RecipeDetailScreen(RecipeViewModel(), Recipe().examplerecipe())
 }

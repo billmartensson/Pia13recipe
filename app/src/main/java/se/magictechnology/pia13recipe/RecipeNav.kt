@@ -9,7 +9,7 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.toRoute
 
 @Composable
-fun RecipeNav(recipeviewmodel : RecipeViewModel = viewModel()) {
+fun RecipeNav(recipeviewmodel : RecipeViewModel) {
     val navController = rememberNavController()
 
     NavHost(navController = navController, startDestination = "recipelist") {
@@ -39,5 +39,5 @@ fun RecipeNav(recipeviewmodel : RecipeViewModel = viewModel()) {
 @Preview(showBackground = true)
 @Composable
 fun RecipeNavPreview() {
-    RecipeNav()
+    RecipeNav(viewModel())
 }

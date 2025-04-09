@@ -1,5 +1,6 @@
 package se.magictechnology.pia13recipe
 
+import android.content.Context
 import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
@@ -16,6 +17,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.content.ContextCompat
+import androidx.datastore.core.DataStore
+import androidx.datastore.preferences.core.Preferences
+import androidx.datastore.preferences.preferencesDataStore
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
@@ -23,21 +28,27 @@ import com.google.firebase.messaging.FirebaseMessaging
 import se.magictechnology.pia13recipe.ui.theme.Pia13recipeTheme
 
 class MainActivity : ComponentActivity() {
+
+    val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
+        /*
         val database = Firebase.database
         val myRef = database.getReference("message")
 
         myRef.setValue("Hello, World!")
+        */
 
-
+        var recipeviewmodel : RecipeViewModel = RecipeViewModel(this.dataStore)
 
         setContent {
             Pia13recipeTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    RecipeNav()
+                    RecipeNav(recipeviewmodel)
                 }
             }
         }
@@ -110,6 +121,6 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun GreetingPreview() {
     Pia13recipeTheme {
-        RecipeNav()
+        RecipeNav(viewModel())
     }
 }
